@@ -237,9 +237,7 @@ ggsave(filename = "SNPs by ordered Groups.png", width = 12, height = 8, dpi = 30
 #being homozygous, same for all other groups too.
 
 #My own analysis
-
-# Create a new data frame 'homozygous' containing Homozygous values for each group
-
+#Here I plotted only ZMMLR group from the group sections. The purpose was to observe what happens in this group specifically. 
 
 ggplot(data = both) +
   geom_bar(mapping = aes(x = 'ZMMLR', fill = Homozygous), stat = "count") +
