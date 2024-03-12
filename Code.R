@@ -9,14 +9,21 @@ library(purrr)
 library(readr)
 library(gtools)
 
+# The 'tidyverse' package has most of the features of the packages like 'dplyr'
+install.packages("tidyverse")
+library(tidyverse)
+
 #set working directory
 setwd("/Users/supantha/Documents/R Assignment/")
 
 #Data Inspection
 
 #read in fang_genotypes text file and set it as genotype_fang
-
 genotype_fang <- read.table("fang_et_al_genotypes.txt", header = T)
+
+# You could alternatively import the .txt files directly from the course GitHub repository
+genotype_fang <- read.table("https://raw.githubusercontent.com/EEOB-BioData/BCB546_Spring2024/main/assignments/UNIX_Assignment/fang_et_al_genotypes.txt", header = TRUE, sep = "\t")
+
 head(genotype_fang)
 str(genotype_fang)
 ncol(genotype_fang)
@@ -25,6 +32,7 @@ nrow(genotype_fang)
 ## Observe the SNP data
 
 SNP <- read.delim("snp_position.txt",header=T)
+# You can also import the .txt SNP file as shown above from the course GitHub repository
 head(SNP)
 str(SNP)
 ncol(SNP)
@@ -255,3 +263,24 @@ ggplot(data = both) +
 ggsave(filename = "Own Analysis_SNPs ZMMLR.png", width = 12, height = 8, dpi = 300)
 
 #We see around 2000000 homozygous, and 500000 as heterozygous and NA.
+
+# Final comments
+You can give your plots names "objects" then save them as .pdf files
+
+pdf("NameOfPDFfile.pdf")# this the name of the pdf file that will contain the ggplot(s)
+print(ggplotName)#(this is the name of the ggplot to be saved in the above pdf file
+
+Also the codes in your R Markdown file can be put under:
+
+```{r}
+code
+```
+                                               
+Goodluck,
+Usamah
+                                               
+                                               
+
+                                               
+                                               
+                                               
