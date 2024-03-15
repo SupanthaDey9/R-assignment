@@ -254,9 +254,6 @@ ggplot(data = both) +
   )
 ggsave(filename = "Own Analysis_SNPs ZMMLR.png", width = 12, height = 8, dpi = 300)
 
-#We see around 2000000 homozygous, and 500000 as heterozygous and NA.                               
-                                               
-
-                                               
+#We see around 2000000 homozygous, and 500000 as heterozygous and NA.                              
                                                
                                                
