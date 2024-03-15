@@ -9,10 +9,6 @@ library(purrr)
 library(readr)
 library(gtools)
 
-# The 'tidyverse' package has most of the features of the packages like 'dplyr'
-install.packages("tidyverse")
-library(tidyverse)
-
 #set working directory
 setwd("/Users/supantha/Documents/R Assignment/")
 
